@@ -3,9 +3,7 @@ DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Menu_Item;
 DROP TABLE IF EXISTS Users;
 
--- ==============================
--- 1. USERS Table (Student/Admin)
--- ==============================
+
 CREATE TABLE Users (
     User_ID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
