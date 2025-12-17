@@ -1,0 +1,11 @@
+CREATE TABLE feedback (
+    Feedback_ID INT AUTO_INCREMENT PRIMARY KEY,
+    User_ID INT NOT NULL,
+    Message TEXT NOT NULL,
+    Created_At TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_feedback_user
+        FOREIGN KEY (User_ID)
+        REFERENCES Users(User_ID)
+        ON DELETE CASCADE
+);
