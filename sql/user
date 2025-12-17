@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS Order_Details;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Menu_Item;
+DROP TABLE IF EXISTS Users;
+
+-- ==============================
+-- 1. USERS Table (Student/Admin)
+-- ==============================
+CREATE TABLE Users (
+    User_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    Role ENUM('Student', 'Admin') NOT NULL
+);
+INSERT INTO Users (Name, Email, Password, Role) 
+VALUES ('Admin', 'admin@example.com', 'admin123', 'Admin');
