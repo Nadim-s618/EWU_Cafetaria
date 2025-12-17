@@ -8,3 +8,16 @@ CREATE TABLE Menu_Item (
     Added_By INT,
     FOREIGN KEY (Added_By) REFERENCES Users(User_ID)
 );
+INSERT INTO Menu_Item (Item_Name, Image_URL, Price, Availability, Added_By)
+VALUES
+('Burger', 'images/burger.jpg', 120.00, TRUE, 1),
+('Pizza', 'images/pizza.jpg', 350.00, TRUE, 1),
+('Momos', 'images/momos.jpg', 150.00, TRUE, 1),
+('Sandwich', 'images/sandwich.jpg', 80.00, TRUE, 1),
+('Coffee', 'images/coffee.jpg', 50.00, TRUE, 1),
+('Fried Rice', 'images/friedrice.jpg', 200.00, TRUE, 1),
+('Pasta', 'images/pasta.jpg', 250.00, TRUE, 1),
+('Noodles', 'images/noodles.jpg', 180.00, TRUE, 1),
+('Chicken Roll', 'images/chickenroll.jpg', 100.00, FALSE, 1),
+('Ice Cream', 'images/icecream.jpg', 90.00, TRUE, 1);
+('Tea','images/tea.jpg',20.00,TRUE,1);
