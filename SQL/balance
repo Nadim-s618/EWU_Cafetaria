@@ -1,0 +1,5 @@
+
+CREATE TABLE admin_balance (
+    id INT(11) PRIMARY KEY,
+    balance DECIMAL(10, 2)
+);
