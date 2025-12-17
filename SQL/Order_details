@@ -1,0 +1,12 @@
+CREATE TABLE Order_Details (
+    OrderDetail_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Order_ID INT,
+    Item_ID INT,
+    Quantity INT NOT NULL CHECK (Quantity > 0),
+    FOREIGN KEY (Order_ID) REFERENCES Orders(Order_ID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (Item_ID) REFERENCES Menu_Item(Item_ID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
