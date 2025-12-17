@@ -1,0 +1,10 @@
+CREATE TABLE Orders (
+    Order_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Order_Date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Status ENUM('Pending', 'Preparing', 'Completed', 'Cancelled') DEFAULT 'Pending',
+    Payment_Status ENUM('Pending', 'Paid', 'Failed', 'Refunded') DEFAULT 'Pending',
+    User_ID INT,
+    FOREIGN KEY (User_ID) REFERENCES Users(User_ID)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
