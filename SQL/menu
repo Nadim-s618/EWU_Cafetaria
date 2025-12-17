@@ -1,0 +1,10 @@
+CREATE TABLE Menu_Item (
+    Item_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Item_Name VARCHAR(100) NOT NULL,
+    Image_URL VARCHAR(255),         -- stores path/URL
+    Image LONGBLOB,                 -- stores actual image file in binary
+    Price DECIMAL(10,2) NOT NULL,
+    Availability BOOLEAN DEFAULT TRUE,
+    Added_By INT,
+    FOREIGN KEY (Added_By) REFERENCES Users(User_ID)
+);
